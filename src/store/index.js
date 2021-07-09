@@ -8,6 +8,8 @@ const INITIAL_STATE = {
         switch (action.type) {
             case 'ADD_ALUNO' :
                 return { ...state, data: [...state.data, action.title]};
+            case 'DEL_ALUNO' :
+                return { ...state, data: []};
                 default:
                     return state;
         }

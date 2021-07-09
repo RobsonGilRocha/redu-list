@@ -11,13 +11,19 @@ function Home() {
         setInput1("")
     }
 
+    function delAluno (){
+      dispatch({ type: 'DEL_ALUNO'})
+      setInput1("")
+  }
+
   return (
       <>
       <ul>
         {alunos.map (alunos => <li key={alunos}>{alunos}</li>)}
     </ul>
     <input value={input1} onChange={(event) => setInput1(event.target.value)}/>
-    <button onClick={addAluno}>O</button>
+    <button onClick={addAluno}>ADD</button>
+    <button onClick={delAluno}>DEL</button>
     </>
   );
 }
